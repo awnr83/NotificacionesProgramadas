@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/createAlarmFragment">
+
+    <fragment
+        android:id="@+id/createAlarmFragment"
+        android:name="com.moappdev.notificacionesprogramadas.ui.fragment.CreateAlarmFragment"
+        android:label="fragment_create_alarm"
+        tools:layout="@layout/fragment_create_alarm" >
+        <action
+            android:id="@+id/action_createAlarmFragment_to_alarmsFragment"
+            app:destination="@id/alarmsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/alarmsFragment"
+        android:name="com.moappdev.notificacionesprogramadas.ui.fragment.AlarmsFragment"
+        android:label="fragment_alarms"
+        tools:layout="@layout/fragment_alarms" >
+        <action
+            android:id="@+id/action_alarmsFragment_to_createAlarmFragment"
+            app:destination="@id/createAlarmFragment" />
+    </fragment>
+</navigation>
